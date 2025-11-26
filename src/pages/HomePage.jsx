@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Header from '../components/layout/Header';
 
 const HomePage = () => {
   return (
@@ -24,11 +25,11 @@ const HomePage = () => {
                 </div>
                 <h5 className="card-title fw-bold">Ver personajes</h5>
                 <p className="card-text text-muted">
-                 Explora todos los personajes de Rick and Morty
+                  Explora todos los personajes de Rick and Morty
                 </p>
                 <Link to="/characters" className="btn btn-primary btn-lg">
                   <i className="bi bi-arrow-right-circle me-2"></i>
-                   Iniciar Chat
+                  Iniciar Chat
                 </Link>
               </div>
             </div>

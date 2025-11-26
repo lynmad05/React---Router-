@@ -1,7 +1,11 @@
 import { Link, useParams } from 'react-router';
+import { useCounterStore } from '../stores/counter.store';
 
 const CharacterDetailPage = () => {
   const { id } = useParams();
+
+  const count = useCounterStore(state => state.count);
+  const inc = useCounterStore(state => state.inc);
 
   return (
     <article className="py-5">
@@ -16,8 +20,12 @@ const CharacterDetailPage = () => {
         <header className="text-center">
           <h1 className="display-5 fw-bold">
             <i className="bi bi-person-badge me-2"></i>
-            Detalle del Personaje
+            Detalle del Personaje {count}
           </h1>
+          <button className="btn btn-primary btn-sm" onClick={inc}>
+            Incrementar
+          </button>
+
           <p className="lead text-muted">ID: {id}</p>
         </header>
 

@@ -3,8 +3,7 @@ import Header from '../components/layout/Header';
 
 const RootLayout = () => {
   return (
-    <>
-      <Header />
+    <><Header/>
       <main>
         <Outlet />
       </main>
